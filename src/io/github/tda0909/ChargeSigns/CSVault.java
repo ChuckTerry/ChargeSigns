@@ -15,16 +15,18 @@ import java.util.logging.Logger;
 
 public class CSVault {
 	
+	private static final Logger Log = null;
 	public ChargeSigns plugin;
+	public static Logger log = Logger.getLogger("Minecraft");
+	public static Economy econ = null;
+	public static Permission perm = null;
+	
 	
 	public CSVault(ChargeSigns instance) {
 		plugin = instance;
 	}
 	
-	public static Logger log = Logger.getLogger("Minecraft");
-	public static Economy econ = null;
-	public static Permission perm = null;
-	
+	//Function Initialized OnEnable to Check for & Hook into Vault Permissions
 	public static boolean VaultPerms() {
 		
 		RegisteredServiceProvider<Permission> permissionProvider = Bukkit.getServer().getServicesManager().getRegistration(Permission.class);
@@ -34,6 +36,36 @@ public class CSVault {
 		}
 		return perm != null;
 	}
+	
+	
+	//Function Initialized OnEnable to Check for & Hook into Vault Economy
+	public static boolean VaultEcon() {
+
+	    if (Bukkit.getServer().getPluginManager().getPlugin("Vault") == null) {
+	            return false;
+	    }
+	    RegisteredServiceProvider<Economy> rsp = Bukkit.getServer().getServicesManager().getRegistration(Economy.class);
+	    if (rsp == null) {
+	        return false;
+	    }
+	    econ = rsp.getProvider();
+	    log.info("[ChargeSigns] Hooked into Vault Economy " + econ.getName());
+	    return econ != null;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

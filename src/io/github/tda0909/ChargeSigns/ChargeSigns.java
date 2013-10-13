@@ -16,11 +16,20 @@ public final class ChargeSigns extends JavaPlugin{
 	
 	@Override
 	public void onEnable(){
+		
+		//Show that Plug-In has Loaded
 		getLogger().info("[ChargeSigns] Plug-In Enabled");
 		
-		CSVault.VaultPerms();
-		//VaultEcon();
+		//Check if Config Exists, Create one if not
+		saveDefaultConfig();
 		
+		//Function in CSVault.java to Hook into Vault Permissions
+		CSVault.VaultPerms();
+		
+		//Function in CSVault.java to Hook into Vault Economy
+		CSVault.VaultEcon();
+		
+		//Command Handlers in CSCommands.java
 		getCommand("chargesigns").setExecutor(new CSCommands(this));
 		
     }

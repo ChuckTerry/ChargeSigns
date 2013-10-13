@@ -1,7 +1,7 @@
 name: ChargeSigns
 main: io.github.tda0909.ChargeSigns.ChargeSigns
-depend: Vault
-version: Alpha_v1.01
+depend: [Vault]
+version: Alpha_v1.03
 description: Developmental Plug-in
 author: tda0909
 website: Soon to Come!
