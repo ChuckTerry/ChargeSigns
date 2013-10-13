@@ -6,15 +6,20 @@ import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 public final class ChargeSigns extends JavaPlugin{
 
+	private final CSVault VaultPerms = new CSVault(this);
+	
 	@Override
 	public void onEnable(){
-		
 		getLogger().info("[ChargeSigns] Plug-In Enabled");
+		
+		CSVault.VaultPerms();
+		//VaultEcon();
 		
 		getCommand("chargesigns").setExecutor(new CSCommands(this));
 		
@@ -27,17 +32,15 @@ public final class ChargeSigns extends JavaPlugin{
     
     
     @EventHandler(priority=EventPriority.HIGH, ignoreCancelled=true)
-    public void OnSignChange(SignChangeEvent event){
-    	Player player = event.getPlayer();
+    public void Lockette(SignChangeEvent event){
+    	
+    	if(event.getLine(0).equalsIgnoreCase("[Private]"))
+    		
     	
     	
+    	return;	
     	
-    }
-    
-    
-    @EventHandler(priority=EventPriority.HIGH, ignoreCancelled=true)
-    public void OnBlockPlace(BlockPlaceEvent event){
-    	
+   
     }
     
 }
