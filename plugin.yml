@@ -1,0 +1,27 @@
+name: ChargeSigns
+main: io.github.tda0909.ChargeSigns.ChargeSigns
+version: Alpha_v1.01
+description: Developmental Plug-in
+author: tda0909
+website: Soon to Come!
+commands:
+  chargesigns:
+    description: Plug-in Test
+    aliases: [cs, chargeS, sCharge]
+    usage: /<command>
+    permission-message: You don't have <permission>
+permissions:
+  changesigns.*:
+    description: Grants Full Command Access
+  changesigns.reload:
+    description: Reloads Config
+  changesigns.exempt:
+    description: Doesn't Charge Player to Place Signs
+  changesigns.version:
+    description: Gets Plug-In Version
+  changesigns.modify:
+    description: Add, Remove, & Change Costs Via Commands
+  changesigns.cost:
+    description: Use Command to See Cost
+  changesigns.norefund:
+    description: Will not Give Player Refund

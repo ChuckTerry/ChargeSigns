@@ -1,0 +1,30 @@
+#
+# ChargeSigns Configuration
+# Some Configuration Options are not yet Implemented
+#
+# Do NOT Change This
+ConfigVer: 1
+General:
+  # Should ChargeSigns tell you if a newer version is available?
+  InformOnUpdates: false
+  LogToConSole: false
+  LogToFile: false
+  DebugMode: false
+  RefundOnBreak: false
+Charge:
+  SampleText1:
+    Cost: 100
+    Refund: 50
+  SampleText2:
+    Cost: 250
+    Refund: 200
+  SampleText3:
+    Cost: 788
+    Refund: 788
+  SampleText4:
+    Cost: 1200
+    Refund: 0
+  CSTest:
+    Cost: 113
+    Refund: 111
+ 
