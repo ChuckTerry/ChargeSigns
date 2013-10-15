@@ -7,11 +7,15 @@ General:
   ## Not yet Implemented
   Language: en
 Signs:
+  ##Here are Some Examples, if a Sign Contains "Test1" on any line the player will be charged $1
   Test1:
     Cost: 1
-  Test2:
+  ## if a Sign Contains [Private] on any line, the player will be charged $2
+  "[Private]":
     Cost: 2
   Test22:
     Cost: 23
   Chuck:
     Cost: 5
+  ## These are just Examples, you can add as many as you want!  make sure to use spaces
+  ## Instead of tabs & If you're going to us Brackets [ ] put quotes around them "[Example]"
