@@ -8,11 +8,13 @@ import org.bukkit.entity.Player;
 public class CSCommands implements CommandExecutor {
 
 	private final ChargeSigns plugin;
-
+	
+	//Sets Instance
 	public CSCommands(ChargeSigns plugin) {
 		this.plugin = plugin;
 	}
-
+	
+	
 	//Handles /chargesigns command
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		    if (cmd.getName().equalsIgnoreCase("chargesigns")) {
