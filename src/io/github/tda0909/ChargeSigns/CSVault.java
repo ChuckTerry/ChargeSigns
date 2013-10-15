@@ -13,19 +13,19 @@ public class CSVault {
 	
 	public ChargeSigns plugin;
 	private static Logger log = Logger.getLogger("Minecraft");
-	private static Permission perm = null;
+	private static Permission permission = null;
 	
 	
-	//Function Initialized by OnEnable to Check for & Hook into Vault Permissions
+	/*/Function Initialized by OnEnable to Check for & Hook into Vault Permissions
 	public static boolean VaultPerms() {
 		
 		RegisteredServiceProvider<Permission> permissionProvider = Bukkit.getServer().getServicesManager().getRegistration(Permission.class);
 		if (permissionProvider != null) {
-			perm = (Permission)permissionProvider.getProvider();
-			log.info("[ChargeSigns] Hooked into Vault Permissons " + perm.getName());
+			permission = (Permission)permissionProvider.getProvider();
+			log.info("[ChargeSigns] Hooked into Vault Permissons " + permission.getName());
 		}
-		return perm != null;
-	}
+		return permission != null;
+	}*/
 	
 	
 	//Function Initialized by OnEnable to Check for & Hook into Vault Economy
