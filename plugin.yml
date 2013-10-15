@@ -1,7 +1,7 @@
 name: ChargeSigns
 main: io.github.tda0909.ChargeSigns.ChargeSigns
 depend: [Vault]
-version: Beta v1.2
+version: Beta v1.21
 description: Developmental Plug-in
 author: tda0909
 website: http://dev.bukkit.org/bukkit-plugins/chargesigns/
@@ -12,24 +12,24 @@ commands:
     usage: /<command>
     permission-message: You don't have <permission>
 permissions:
-  changesigns.*:
+  chargesigns.*:
     description: Grants Full Command Access
     default: op
-  changesigns.reload:
+  chargesigns.reload:
     description: Reloads Config
     default: op
-  changesigns.exempt:
+  chargesigns.exempt:
     description: Doesn't Charge Player to Place Signs
     default: op
-  changesigns.version:
+  chargesigns.version:
     description: Gets Plug-In Version
     default: op
-  changesigns.modify:
+  chargesigns.modify:
     description: Add, Remove, & Change Costs Via Commands
     default: op
-  changesigns.cost:
+  chargesigns.cost:
     description: Use Command to See Cost
     default: true
-  changesigns.norefund:
+  chargesigns.norefund:
     description: Will not Give Player Refund
     default: false
