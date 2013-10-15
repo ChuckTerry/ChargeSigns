@@ -1,17 +1,22 @@
 #
 # ChargeSigns Configuration
 #
+# Do NOT Change This
+ConfigVer: 1
 General:
-  ## Do NOT Change ConfigVersion
-  ConfigVersion: 1
-  ## Not yet Implemented
-  Language: en
-Signs:
-  Test1:
-    Cost: 1
-  Test2:
-    Cost: 2
-  Test22:
-    Cost: 23
-  Chuck:
-    Cost: 5
+  ## NOT IMPLEMENTED Should ChargeSigns tell you if a newer version is available?
+  InformOnUpdates: false
+  ## NOT IMPLEMENTED Should ChargeSigns give you extra information in the Console?
+  DebugMode: false
+  ## NOT IMPLMENTED Should ChargeSigns refund a player for breaking the sing?
+  RefundOnBreak: false
+Charge:
+  Lockette:
+      Private: true
+        Cost: 4
+        Refund: 2
+      MoreUsers: true
+        Cost: 2
+        Refund: 1
+        
+ 
