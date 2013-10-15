@@ -1,23 +1,20 @@
 package io.github.tda0909.ChargeSigns;
 
+import org.bukkit.block.Block;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.event.block.SignChangeEvent;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
-import org.bukkit.event.Listener;
-import org.bukkit.block.Sign;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.event.block.SignChangeEvent;
-import org.bukkit.entity.Player;
-import org.bukkit.configuration.file.YamlConfiguration;
 
-public final class ChargeSigns extends JavaPlugin{
+import net.milkbowl.vault.economy.Economy;
+import net.milkbowl.vault.permission.Permission;
 
-	private final CSVault VaultPerms = new CSVault(this);
-	private ChargeSigns plugin;
-	
+public class ChargeSigns extends JavaPlugin{
+
+	//Set Public Fields
+	public ChargeSigns plugin;
+	public static Economy economy = null;
+	public static Economy balance = null;
+	public static Block block = null;
+	public static Permission perms = null;
+
 	
 	@Override
 	public void onEnable(){
@@ -34,29 +31,20 @@ public final class ChargeSigns extends JavaPlugin{
 		//Function in CSVault.java to Hook into Vault Economy
 		CSVault.VaultEcon();
 		
+		
 		//Command Handlers in CSCommands.java
 		getCommand("chargesigns").setExecutor(new CSCommands(this));
 		
 		//Register Block Listener
-		getServer().getPluginManager().registerEvents(new CSBlockListener(this),  this);
+		getServer().getPluginManager().registerEvents(new CSBlockListener(this), this);
+		getServer().getPluginManager().registerEvents(new CSCustomListener(this), this);
 		
     }
  
     @Override
     public void onDisable() {
     	getLogger().info("[ChargeSigns] Plug-In Disabled");
-    }
-    //Sign sign;
-    
-    
-    //public ChargeSignsBlockListener(ChargeSigns instance) {
-    	
-    //	this.plugin = instance;
-    //}
-    
-    
-
-    	
+    }   	
    
 }
     
