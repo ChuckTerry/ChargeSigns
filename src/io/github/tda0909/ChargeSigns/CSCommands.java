@@ -11,10 +11,9 @@ import org.bukkit.plugin.PluginDescriptionFile;
 public class CSCommands implements CommandExecutor {
 
 	public ChargeSigns plugin;
-	
 	// Sets Instance
-	public CSCommands(ChargeSigns plugin) {
-		this.plugin = plugin;
+	public CSCommands(ChargeSigns instance) {
+		this.plugin = instance;
 	}
 
 
@@ -30,20 +29,23 @@ public class CSCommands implements CommandExecutor {
 		    			} else {
 		    				sender.sendMessage("Player, Command Run Confirmed");
 		    				return true;
-		    				}		    			
+		    				}
 		    		}
 		    	
 		    	// ChargeSigns Version - Shows Current PlugIn Version
 		    	if(args.length == 1){
 		    		
 		    		if (args[0].equalsIgnoreCase("version")){
-		    			//String ver = ChargeSigns.version.getVersion();
-		    			//String var = PluginDescriptionFile.getVersion();
-		    			sender.sendMessage("Not Yet Implemented");
+		    			//String pdf = PluginDescriptionFile.getDescription();
+		    			//PluginDescriptionFile pdf = this.getDescription();
+		    			//String ver = ChargeSigns.pdf.getVersion();
+		    			//sender.sendMessage("Charge Signs " + ver);
 		    			return true;
 		    		}
 		    		
 		    		else if (args[0].equalsIgnoreCase("reload")){
+		    			//PluginDescriptionFile pdf = plugin.getVersion();
+		    			//String pdf = plugin.getVersion();
 		    			sender.sendMessage("Reload Not Yet Implemented");
 		    			return true;
 		    		} 
