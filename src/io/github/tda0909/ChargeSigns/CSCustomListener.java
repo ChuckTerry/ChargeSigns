@@ -16,17 +16,16 @@ public class CSCustomListener implements Listener {
 	}
 	
 	
-
     @EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=true)
     public void DynamicListener(SignChangeEvent event){
     	
     	Player p = event.getPlayer();
     	double money = (ChargeSigns.economy.getBalance(p.getName())); 
     	boolean exempt = true;
-    	String Line0 = (event.getLine(0));
-    	String Line1 = (event.getLine(1));
-    	String Line2 = (event.getLine(2));
-    	String Line3 = (event.getLine(3));
+    	String Line0 = (event.getLine(0).toLowerCase());
+    	String Line1 = (event.getLine(1).toLowerCase());
+    	String Line2 = (event.getLine(2).toLowerCase());
+    	String Line3 = (event.getLine(3).toLowerCase());
     	    	
     	// Check for Exempt Permission
     	if(exempt = ChargeSigns.permission.has(p, "chargesigns.exempt")){    		
