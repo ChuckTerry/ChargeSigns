@@ -2,6 +2,7 @@ package io.github.tda0909.ChargeSigns;
 
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
+import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,6 +20,8 @@ public class ChargeSigns extends JavaPlugin{
 	public static Block block = null;
 	public static Permission permission = null;
 	private static final Logger log = Logger.getLogger("Minecraft");
+	//public static PluginDescriptionFile pdf = plugin.getDescription.getVersion();
+	//public String ver = pdf.getVersion();
 	
 	@Override
 	public void onEnable(){
