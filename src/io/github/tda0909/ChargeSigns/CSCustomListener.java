@@ -5,6 +5,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.entity.Player;
+import java.lang.String;
 
 public class CSCustomListener implements Listener {
 
