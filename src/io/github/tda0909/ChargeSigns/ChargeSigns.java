@@ -3,6 +3,7 @@ package io.github.tda0909.ChargeSigns;
 
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -99,14 +100,14 @@ public class ChargeSigns extends JavaPlugin{
 		    		
 		    		// Returns the Version Number Listed in the Plugin.yml
 		    		if (args[0].equalsIgnoreCase("version")){
-		    			sender.sendMessage("Charge Signs " + this.getDescription().getVersion());
+		    			sender.sendMessage(ChatColor.GOLD+"Charge Signs "+ChatColor.GREEN+this.getDescription().getVersion());
 		    			return true;
 		    		}
 		    		
 		    		//Reloads Configuration
 		    		else if (args[0].equalsIgnoreCase("reload")){		    					    			
 		    			reloadConfig();
-		    			sender.sendMessage("Configuration Reloaded");
+		    			sender.sendMessage(ChatColor.GOLD+"Configuration Reloaded");
 		    			return true;
 		    			
 		    		} 
