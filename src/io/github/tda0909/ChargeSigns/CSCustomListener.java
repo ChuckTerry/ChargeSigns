@@ -1,5 +1,6 @@
 package io.github.tda0909.ChargeSigns;
 
+import org.bukkit.ChatColor;
 import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -37,12 +38,12 @@ public class CSCustomListener implements Listener {
     	if(this.plugin.getConfig().contains("Signs." + Line0 + ".Cost")){
     		double cost = this.plugin.getConfig().getDouble("Signs." + Line0 + ".Cost");
     		if(money < cost){
-    			p.sendMessage("That sign cost " + cost + ", You only have: " + money);
+    			p.sendMessage(ChatColor.GOLD+"That sign cost "+ChatColor.GREEN+cost+ChatColor.GOLD+", You only have: "+ChatColor.GREEN+money);
     			event.setCancelled(true);
     			event.getBlock().breakNaturally();
     		}else{	
     			ChargeSigns.economy.withdrawPlayer(event.getPlayer().getName(), cost);
-				p.sendMessage("You were charged " + cost + " to place that sign.");
+				p.sendMessage(ChatColor.GOLD+"You were charged "+ChatColor.GREEN+cost+ChatColor.GOLD+" to place that sign.");
     		}   	
     	} else{
     	
@@ -51,12 +52,12 @@ public class CSCustomListener implements Listener {
     		if(this.plugin.getConfig().contains("Signs." + Line1 + ".Cost")){
         		double cost = this.plugin.getConfig().getDouble("Signs." + Line1 + ".Cost");
         		if(money < cost){
-        			p.sendMessage("That sign cost " + cost + ", You only have: " + money);
+        			p.sendMessage(ChatColor.GOLD+"That sign cost "+ChatColor.GREEN+cost+ChatColor.GOLD+", You only have: "+ChatColor.GREEN+money);
         			event.setCancelled(true);
         			event.getBlock().breakNaturally();
         		}else{	
         			ChargeSigns.economy.withdrawPlayer(event.getPlayer().getName(), cost);
-    				p.sendMessage("You were charged " + cost + " to place that sign.");
+    				p.sendMessage(ChatColor.GOLD+"You were charged "+ChatColor.GREEN+cost+ChatColor.GOLD+" to place that sign.");
         		}   	
         	} else{	
         		
@@ -65,12 +66,12 @@ public class CSCustomListener implements Listener {
         		if(this.plugin.getConfig().contains("Signs." + Line2 + ".Cost")){
             		double cost = this.plugin.getConfig().getDouble("Signs." + Line2 + ".Cost");
             		if(money < cost){
-            			p.sendMessage("That sign cost " + cost + ", You only have: " + money);
+            			p.sendMessage(ChatColor.GOLD+"That sign cost "+ChatColor.GREEN+cost+ChatColor.GOLD+", You only have: "+ChatColor.GREEN+money);
             			event.setCancelled(true);
             			event.getBlock().breakNaturally();
             		}else{	
             			ChargeSigns.economy.withdrawPlayer(event.getPlayer().getName(), cost);
-        				p.sendMessage("You were charged " + cost + " to place that sign.");
+        				p.sendMessage(ChatColor.GOLD+"You were charged "+ChatColor.GREEN+cost+ChatColor.GOLD+" to place that sign.");
             		}   	
             	} else{
             		
@@ -79,12 +80,12 @@ public class CSCustomListener implements Listener {
             		if(this.plugin.getConfig().contains("Signs." + Line3 + ".Cost")){
                 		double cost = this.plugin.getConfig().getDouble("Signs." + Line3 + ".Cost");
                 		if(money < cost){
-                			p.sendMessage("That sign cost " + cost + ", You only have: " + money);
+                			p.sendMessage(ChatColor.GOLD+"That sign cost "+ChatColor.GREEN+cost+ChatColor.GOLD+", You only have: "+ChatColor.GREEN+money);
                 			event.setCancelled(true);
                 			event.getBlock().breakNaturally();
                 		}else{	
                 			ChargeSigns.economy.withdrawPlayer(event.getPlayer().getName(), cost);
-            				p.sendMessage("You were charged " + cost + " to place that sign.");
+            				p.sendMessage(ChatColor.GOLD+"You were charged "+ChatColor.GREEN+cost+ChatColor.GOLD+" to place that sign.");
                 		}   	
                 	} else{	return;}
             	}
