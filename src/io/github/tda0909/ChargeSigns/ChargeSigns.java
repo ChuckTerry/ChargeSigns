@@ -100,14 +100,23 @@ public class ChargeSigns extends JavaPlugin{
 		    		
 		    		// Returns the Version Number Listed in the Plugin.yml
 		    		if (args[0].equalsIgnoreCase("version")){
-		    			sender.sendMessage(ChatColor.GOLD+"Charge Signs "+ChatColor.GREEN+this.getDescription().getVersion());
-		    			return true;
+		    			if (ChargeSigns.permission.has(sender, "chargesigns.version")){
+		    				sender.sendMessage(ChatColor.GOLD+"Charge Signs "+ChatColor.GREEN+this.getDescription().getVersion());
+		    				return true;
+		    			}else{
+		    				sender.sendMessage(ChatColor.RED+"You Don't have Permission");
+		    			}
 		    		}
 		    		
 		    		//Reloads Configuration
-		    		else if (args[0].equalsIgnoreCase("reload")){		    					    			
-		    			reloadConfig();
-		    			sender.sendMessage(ChatColor.GOLD+"Configuration Reloaded");
+		    		else if (args[0].equalsIgnoreCase("reload")){
+		    			if (ChargeSigns.permission.has(sender, "chargesigns.reload")){
+		    				reloadConfig();
+		    				sender.sendMessage(ChatColor.GOLD+"Configuration Reloaded");
+		    				return true;
+		    			} else{
+		    				sender.sendMessage(ChatColor.RED+"You Don't have Permission");
+		    			}
 		    			return true;
 		    			
 		    		} 
@@ -134,15 +143,6 @@ public class ChargeSigns extends JavaPlugin{
 		    			return true;
 		    		}
 		    		
-		    		else if (args[0].equalsIgnoreCase("exempt")){
-		    			sender.sendMessage("Exempt Not Yet Implemented");
-		    			return true;
-		    		}
-		    		
-		    		else if (args[0].equalsIgnoreCase("norefund")){
-		    			sender.sendMessage("NoRefund Not Yet Implemented");
-		    			return true;
-		    		}
 		    		
 		    		else {
 		    				sender.sendMessage("Invalid Command Arguments");
