@@ -1,7 +1,7 @@
 name: ChargeSigns
 main: io.github.tda0909.ChargeSigns.ChargeSigns
 depend: [Vault]
-version: Beta v1.28
+version: Beta v1.29
 description: Charge Players to Place Certain Signs as Defined in the config.yml
 author: tda0909
 website: http://dev.bukkit.org/bukkit-plugins/chargesigns/
